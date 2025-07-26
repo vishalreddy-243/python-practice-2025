@@ -1,0 +1,68 @@
+import random
+
+rock = '''      # rock symbol
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''      # paper symbol
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''   #scissors symbol
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+print("Welcome to rock paper and scissors")
+chos = int(input("Choose 0 for rock , 1 for paper and 2 for scissors")) #to give input
+if chos == 0 :
+    print(rock)
+elif chos == 1 :
+    print(paper)
+else :
+    print(scissors)
+
+com_chos = random.randint(0,2)
+if com_chos == 0 :
+    print(rock)
+elif com_chos == 1 :
+    print(paper)
+else :
+    print(scissors)
+
+
+# judgment 
+if chos == 0 and com_chos == 0 :
+    print("Draw")
+elif chos == 1 and com_chos == 1 :
+    print("Draw")
+elif chos == 2 and com_chos == 2 :
+    print("Draw")
+elif chos == 0 and com_chos == 1 :
+    print("you lose")
+elif chos == 1 and com_chos == 0 :
+    print("you win")
+elif chos == 0 and com_chos == 2 :
+    print("you win")
+elif chos == 2 and com_chos == 0 :
+    print("you lose")
+elif chos == 2 and com_chos == 1 :
+    print("you win")
+elif chos == 1 and com_chos == 2 :
+    print("you lose")
+else :
+    print("Give valid number to continue to the Game!")
