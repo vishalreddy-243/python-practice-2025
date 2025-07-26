@@ -1,0 +1,15 @@
+def turn_right():   #defining new funtionfor turning right
+    turn_left()
+    turn_left()
+    turn_left()
+
+while not at_goal():   #while to complete maze 
+    if front_is_clear():
+        move()
+        if right_is_clear():
+            turn_right()
+
+        elif wall_in_front():
+            turn_left()
+    else :
+        turn_left()
